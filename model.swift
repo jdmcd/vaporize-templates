@@ -8,6 +8,8 @@ final class VAR_MODEL_NAME: Model {
 
     var exists: Bool = false
 
+    VAR_FIRST_INIT
+
     init(node: Node, in context: Context) throws {
         id = try node.extract("id")
         VAR_INIT
