@@ -4,7 +4,6 @@ import Fluent
 
 final class VAR_MODEL_NAME: Model {
     var id: Node?
-
     VAR_PROPERTIES
 
     var exists: Bool = false
