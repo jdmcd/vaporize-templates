@@ -11,13 +11,13 @@ final class VAR_MODEL_NAME: Model {
 
     init(node: Node, in context: Context) throws {
         id = try node.extract("id")
-        VAR_PROPERTIES_INIT
+        VAR_INIT
     }
 
     func makeNode(context: Context) throws -> Node {
         return try Node(node: [
             "id": id,
-            VAR_PROPERTIES_MAKE_NODE
+            VAR_MAKE_NODE
         ])
     }
 }
