@@ -4,16 +4,16 @@ import Fluent
 
 final class VAR_MODEL_NAME: Model {
     var id: Node?
-    
+
     VAR_PROPERTIES
-    
+
     var exists: Bool = false
-    
+
     init(node: Node, in context: Context) throws {
-        id = try node.extract("id"
+        id = try node.extract("id")
         VAR_PROPERTIES_INIT
     }
-    
+
     func makeNode(context: Context) throws -> Node {
         return try Node(node: [
             "id": id,
@@ -30,7 +30,7 @@ extension VAR_MODEL_NAME: Preparation {
             VAR_BUILDER
         })
     }
-    
+
     static func revert(_ database: Database) throws {
     }
 }
