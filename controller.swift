@@ -9,6 +9,8 @@ final class VAR_CONTROLLER_NAME {
     }
 
     func addRoutes() {
-
+        VAR_ROUTES
     }
+    
+    VAR_FUNCTIONS
 }
