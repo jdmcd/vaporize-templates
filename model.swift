@@ -18,10 +18,11 @@ final class VAR_MODEL_NAME: Model {
     }
 
     func makeNode(context: Context) throws -> Node {
-        return try Node(node: [
-            "id": id,
-            VAR_MAKE_NODE
-        ])
+        var node: [String: Node] = [:]
+
+        VAR_MAKE_NODE
+
+        return try node.makeNode()
     }
 }
 
