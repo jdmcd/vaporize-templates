@@ -1,0 +1,6 @@
+#extend("Views/base")
+#export("title") { VAR_TITLE }
+
+#export("html") {
+  
+}
