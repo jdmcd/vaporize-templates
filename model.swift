@@ -19,7 +19,8 @@ final class VAR_MODEL_NAME: Model {
 
     func makeNode(context: Context) throws -> Node {
         var node: [String: Node] = [:]
-
+        
+        node["id"] = id
         VAR_MAKE_NODE
 
         return try node.makeNode()
