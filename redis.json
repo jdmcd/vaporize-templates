@@ -1,4 +1,3 @@
 {
-    "address": "REDIS_ADDRESS",
-    "port": REDIS_PORT
+    "url": "redis://ignored@REDIS_ADDRESS:REDIS_PORT/ignored"
 }
