@@ -1,7 +1,7 @@
 import Vapor
 import FluentProvider
 
-final class Token: Model {
+final class VAR_MODEL_NAME: Model {
     var storage = Storage()
     
     VAR_PROPERTIES
