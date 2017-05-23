@@ -1,7 +1,7 @@
 {
   "user": "MYSQL_USER",
   "password": "MYSQL_PASSWORD",
-  "host": "MYSQL_HOST",
+  "hostname": "MYSQL_HOST",
   "port": "MYSQL_PORT",
   "database": "MYSQL_DATABASE"
 }
