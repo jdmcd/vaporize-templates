@@ -1,41 +1,37 @@
-import Foundation
 import Vapor
-import Fluent
+import FluentProvider
 
-final class VAR_MODEL_NAME: Model {
-    var id: Node?
+final class Token: Model {
+    var storage = Storage()
+    
     VAR_PROPERTIES
-
-    var exists: Bool = false
 
     init(VAR_FIRST_INIT_PROPERTIES) {
         VAR_FI_ASSIGN
     }
-
-    init(node: Node, in context: Context) throws {
-        id = try node.extract("id")
+    
+    init(row: Row) throws {
         VAR_INIT
     }
+    
+    func makeRow() throws -> Row {
+        var row = Row()
 
-    func makeNode(context: Context) throws -> Node {
-        var node: [String: Node] = [:]
-        
-        node["id"] = id
-        VAR_MAKE_NODE
+        VAR_MAKE_ROW
 
-        return try node.makeNode()
+        return row
     }
 }
 
 //MARK: - Preparation
 extension VAR_MODEL_NAME: Preparation {
     static func prepare(_ database: Database) throws {
-        try database.create("VAR_DB_NAME", closure: { builder in
+        try database.create(self, closure: { builder in
             builder.id()
             VAR_BUILDER
         })
     }
-
-    static func revert(_ database: Database) throws {
+    
+    static func revert(_ database: Database) throws {   
     }
 }
