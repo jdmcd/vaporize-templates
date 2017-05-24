@@ -7,4 +7,5 @@
 *.xcuserstate
 *.xcworkspacedata
 
-/Config/secrets/
+/Config/development/
+/Config/test/
