@@ -35,3 +35,6 @@ extension VAR_MODEL_NAME: Preparation {
     static func revert(_ database: Database) throws {   
     }
 }
+
+//MARK: - Timestampable
+extension VAR_MODEL_NAME: Timestampable { }
