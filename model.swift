@@ -13,6 +13,10 @@ final class VAR_MODEL_NAME: Model {
     init(row: Row) throws {
         VAR_INIT
     }
+
+    init(json: JSON) throws {
+        VAR_JSON_INIT
+    }
     
     func makeRow() throws -> Row {
         var row = Row()
@@ -33,6 +37,17 @@ extension VAR_MODEL_NAME: Preparation {
     }
     
     static func revert(_ database: Database) throws {   
+    }
+}
+
+//MARK: - JSONConvertible
+extension VAR_MODEL_NAME: JSONConvertible {
+    func makeJSON() throws -> JSON {
+        var json = JSON()
+
+        VAR_MAKE_JSON
+
+        return json
     }
 }
 
