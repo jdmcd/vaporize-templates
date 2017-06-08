@@ -9,7 +9,7 @@ final class VAR_CONTROLLER_NAME: RouteCollection {
     }
 
     func build(_ builder: RouteBuilder) throws {
-        builder.group(FlashMiddleware()) { build in
+        builder.frontend() { build in
             VAR_ROUTES
         }
     }
