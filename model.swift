@@ -45,6 +45,7 @@ extension VAR_MODEL_NAME: JSONConvertible {
     func makeJSON() throws -> JSON {
         var json = JSON()
 
+        try json.set("id", id)
         VAR_MAKE_JSON
 
         return json
