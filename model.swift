@@ -45,7 +45,7 @@ extension VAR_MODEL_NAME: JSONConvertible {
     func makeJSON() throws -> JSON {
         var json = JSON()
 
-        try json.set("id", id)
+        try json.set(VAR_MODEL_NAME.Field.id, id)
         VAR_MAKE_JSON
 
         return json
@@ -54,3 +54,11 @@ extension VAR_MODEL_NAME: JSONConvertible {
 
 //MARK: - Timestampable
 extension VAR_MODEL_NAME: Timestampable { }
+
+//MARK: - Field
+extension VAR_MODEL_NAME {
+    enum Field: String {
+        case id
+        VAR_FIELD_ENUM_CASES
+    }
+}
