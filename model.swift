@@ -47,6 +47,8 @@ extension VAR_MODEL_NAME: JSONConvertible {
 
         try json.set(VAR_MODEL_NAME.Field.id, id)
         VAR_MAKE_JSON
+        try json.set(VAR_MODEL_NAME.createdAtKey, createdAt)
+        try json.set(VAR_MODEL_NAME.updatedAtKey, updatedAt)
 
         return json
     }
