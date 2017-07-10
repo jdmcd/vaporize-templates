@@ -54,6 +54,10 @@ extension VAR_MODEL_NAME: JSONConvertible {
     }
 }
 
+VAR_NODE
+
+VAR_VIEW_DATA
+
 //MARK: - Timestampable
 extension VAR_MODEL_NAME: Timestampable { }
 
